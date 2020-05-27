@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* class color */
+:root {
+	--dark-color-a: #000000;
+	--light-color: #ffffff;
+	--green-color: rgb(0, 128, 0);
+	--gray-color: #777;
+	--white-color: #fff;
+}
+
+/* tag  */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: var(--green-color);
+	background: var(--dark-color-a);
+	margin: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.button {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: var(--light-color);
+	color: var(--dark-color-a);
+	font-size: 17px;
+}
+
+/* All components inside */
+.chat-container {
+	height: 100vh;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+}
+
+/* top bar head with name and leave button */
+.chat-header {
+	background: var(--dark-color-a);
+	color: var(--white-color);
+	padding: 5px 15px 5px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: solid 1px;
+	border-color: var(--green-color);
+}
+
+/* lateral bar with room name and list users and main bar with chat messages */
+.chat-main {
+	display: flex;
+	grid-template-columns: 1fr 3fr;
+	height: calc(100vh - 132px);
+	border: solid 1px;
+	border-color: var(--green-color);
+}
+
+/* laeral bar with room and name */
+.chat-sidebar {
+	background: var(--dark-color-a);
+	color: var(--white-color);
+	padding: 20px 20px 60px;
+	width: 250px;
+	overflow-y: scroll;
+	border: solid 1px;
+	border-color: var(--green-color);
+}
+
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+	margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+.chat-messages {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 100%;
+	height: 100%;
+	white-space: wrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.chat-messages .message {
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+.chat-messages .message .meta {
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--green-color);
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+	color: var(--gray-color);
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	border: solid 1px;
+	border-color: var(--green-color);
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+	background-color: var(--dark-color-a);
+	color: var(--green-color);
+}
+
+/* Main image background */
+.bgImage {
+	opacity: 10%;
+	background-image: url(../image/skullBG.png);
+	background-repeat: no-repeat;
+	background-size: 35%;
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	background-position: center;
+}
+
+/* ALL MEDIA */
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+
+	.chat-messages {
+		max-height: 450px;
+	}
+
+	.chat-form-container {
+		position: absolute;
+	}
+}

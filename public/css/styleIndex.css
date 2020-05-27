@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* class color */
+:root {
+	--dark-color-a: #000000;
+	--light-color: #ffffff;
+	--green-color: rgb(0, 128, 0);
+	--gray-color: #777;
+	--white-color: #fff;
+}
+
+/* tag  */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: var(--dark-color-a);
+	margin: 20px;
+	position: absolute;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.button {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: var(--white-color);
+	color: var(--green-color);
+	border: 0;
+	font-size: 17px;
+	font-weight: bolder;
+}
+
+/* All components inside */
+.join-container {
+	max-width: 500px;
+	margin: 120px auto;
+	color: var(--white-color);
+	position: relative;
+	opacity: 75%;
+
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	border: solid 1px;
+	border-color: var(--green-color);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+	border: solid 1px;
+	border-color: var(--green-color);
+	color: var(--green-color);
+	font-weight: bolder;
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main .button {
+	margin-top: 20px;
+	width: 100%;
+}
+
+/* Main image background */
+.bgImage {
+	opacity: 25%;
+	background-image: url(../image/skullBG.png);
+	background-repeat: no-repeat;
+	background-size: 35%;
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	padding: 3em;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	background-position: center;
+
+}
+
+.mark {
+	color: var(--green-color);
+	float: right;
+
+
+}
+
+/* ALL MEDIA */
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+
+	.bgImage {
+		background-size: cover;
+	}
+
+	.join-container {
+		margin: 80px auto;
+	}
+}
