@@ -28,7 +28,7 @@ io.on('connection', socket => {
 
     // Welcome current user
     socket.emit('message', formatMessage(botName, `  
-    >>CUIDADO COM O QUE POSTAR !<<
+    >>PROJECT GITHUB: https://github.com/sauloiot/TheHiddenChat<<
     `));
     
 
