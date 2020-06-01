@@ -113,6 +113,11 @@ a {
 	padding: 10px;
 	margin-bottom: 15px;
 	border-radius: 5px;
+	white-space: wrap;	
+	text-overflow: ellipsis;
+	border: solid 1px;
+	border-color: rgba(0, 0, 0, 0);
+	
 }
 
 .chat-messages .message .meta {
